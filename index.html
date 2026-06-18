@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanya Choudhary | Resume Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-dark: #1f2937;
+            --text-light: #4b5563;
+            --bg-light: #f3f4f6;
+            --bg-white: #ffffff;
+            --accent-color: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Header Style */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-info a, .contact-info span {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .skills-list, .certifications-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            background: var(--bg-light);
+            padding: 0.4rem 0.8rem;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-right: 0.4rem;
+        }
+
+        .sidebar-item p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Main Content Styling */
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .objective-text {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        .card {
+            margin-bottom: 1.5rem;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .card-subtitle {
+            font-size: 0.95rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .card-date {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .card-tech-stack {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .card-body {
+            list-style-type: square;
+            padding-left: 1.2rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .card-body li {
+            margin-bottom: 0.4rem;
+        }
+
+        .achievement-item {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+        }
+
+        .achievement-item::before {
+            content: "🏆";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Section -->
+    <header>
+        <h1>Tanya Choudhary[cite: 1]</h1>
+        <p>Seeking: Software / Full Stack Development / Data Science Internship 2026[cite: 1]</p>
+        <div class="contact-info">
+            <span>📍 Delhi, India[cite: 1]</span>
+            <a href="mailto:tanyachoudhary2574@gmail.com">📧 tanyachoudhary2574@gmail.com[cite: 1]</a>
+            <span>📞 +91 80763 61231[cite: 1]</span>
+            <a href="#">🔗 LinkedIn[cite: 1]</a>
+            <a href="#">💻 GitHub[cite: 1]</a>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        
+        <!-- Left Column: Sidebar -->
+        <aside class="sidebar">
+            
+            <!-- Education -->
+            <div class="sidebar-item">
+                <h2 class="section-title">Education</h2>
+                <div class="card-subtitle" style="font-size: 1.05rem; color: var(--text-dark);">BCA (2nd Year)[cite: 1]</div>
+                <p>Maharaja Agrarsen Institute of Management Studies, Delhi[cite: 1]</p>
+                <p class="card-date">2024 - 2028[cite: 1]</p>
+                <p style="font-weight: 600; color: var(--primary-color);">CGPA: 9.1 / 10[cite: 1]</p>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="sidebar-item">
+                <h2 class="section-title">Technical Skills</h2>
+                <ul class="skills-list">
+                    <li>Python[cite: 1]</li>
+                    <li>Java[cite: 1]</li>
+                    <li>C[cite: 1]</li>
+                    <li>Data Science[cite: 1]</li>
+                    <li>DBMS[cite: 1]</li>
+                    <li>DSA (Basics)[cite: 1]</li>
+                    <li>Software Testing[cite: 1]</li>
+                </ul>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="sidebar-item">
+                <h2 class="section-title">Soft Skills</h2>
+                <ul class="skills-list">
+                    <li>Creative thinking[cite: 1]</li>
+                    <li>Leadership[cite: 1]</li>
+                    <li>Event management[cite: 1]</li>
+                    <li>Teamwork[cite: 1]</li>
+                </ul>
+            </div>
+
+            <!-- Certifications -->
+            <div class="sidebar-item">
+                <h2 class="section-title">Certifications</h2>
+                <ul class="certifications-list" style="color: var(--text-light); font-size: 0.95rem; padding-left: 0.5rem;">
+                    <li style="margin-bottom: 0.5rem;">• Full Stack Development Certification Course[cite: 1]</li>
+                    <li style="margin-bottom: 0.5rem;">• Data Structures & Algorithms Certification Course[cite: 1]</li>
+                    <li style="margin-bottom: 0.5rem;">• UI/UX Design (Infosys Certified)[cite: 1]</li>
+                </ul>
+            </div>
+
+            <!-- Languages -->
+            <div class="sidebar-item">
+                <h2 class="section-title">Languages</h2>
+                <p><strong>Hindi:</strong> Native[cite: 1]</p>
+                <p><strong>English:</strong> Fluent[cite: 1]</p>
+            </div>
+
+        </aside>
+
+        <!-- Right Column: Main Content -->
+        <main class="content-area">
+            
+            <!-- Objective -->
+            <section>
+                <h2 class="section-title">Objective</h2>
+                <p class="objective-text">
+                    Motivated BCA student with a strong 9.1 CGPA and hands-on experience in full-stack development and data science, seeking a summer internship to solve real-world problems, contribute to impactful projects, and grow within a collaborative team.[cite: 1]
+                </p>
+            </section>
+
+            <!-- Projects -->
+            <section>
+                <h2 class="section-title">Projects</h2>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">MoodAsana Yoga Mood Analyser[cite: 1]</div>
+                            <div class="card-subtitle">Personal Project[cite: 1]</div>
+                        </div>
+                    </div>
+                    <div class="card-tech-stack">React.js, Node.js, TensorFlow[cite: 1]</div>
+                    <ul class="card-body">
+                        <li>Built an AI-powered web app that detects user mood via pose analysis and recommends yoga asanas accordingly.[cite: 1]</li>
+                        <li>Integrated TensorFlow model for real-time human pose classification with live webcam input.[cite: 1]</li>
+                        <li>Designed end-to-end full-stack architecture with React frontend and Node.js REST API backend.[cite: 1]</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">MCD Civic Complaint Portal[cite: 1]</div>
+                            <div class="card-subtitle">Web Project[cite: 1]</div>
+                        </div>
+                    </div>
+                    <div class="card-tech-stack">HTML, CSS, JavaScript[cite: 1]</div>
+                    <ul class="card-body">
+                        <li>Developed a civic tech platform enabling residents to report sewage and society maintenance issues to MCD.[cite: 1]</li>
+                        <li>Built complaint submission, tracking, and status update features for public use.[cite: 1]</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Data Science Event Participation Dashboard[cite: 1]</div>
+                            <div class="card-subtitle">Academic Project[cite: 1]</div>
+                        </div>
+                    </div>
+                    <div class="card-tech-stack">Python, Data Analysis[cite: 1]</div>
+                    <ul class="card-body">
+                        <li>Analysed event participation data to identify trends and generate actionable insights for organisers.[cite: 1]</li>
+                        <li>Visualised findings using Python libraries to support data-driven decision making.[cite: 1]</li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <!-- Experience & Leadership -->
+            <section>
+                <h2 class="section-title">Experience & Leadership</h2>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Creative Head[cite: 1]</div>
+                            <div class="card-subtitle">Algorithm Society, MAIMS[cite: 1]</div>
+                        </div>
+                    </div>
+                    <ul class="card-body">
+                        <li>Led creative direction for college tech society events, designing campaigns and promotional material.[cite: 1]</li>
+                        <li>Coordinated with cross-functional teams to plan and execute coding competitions and workshops.[cite: 1]</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Event Volunteer[cite: 1]</div>
+                            <div class="card-subtitle">College-Level Academic Conference, MAIMS[cite: 1]</div>
+                        </div>
+                    </div>
+                    <ul class="card-body">
+                        <li>Managed logistics, registration, and on-ground coordination for a college-wide conference.[cite: 1]</li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <!-- Achievements -->
+            <section>
+                <h2 class="section-title">Achievements</h2>
+                <div class="achievement-item">
+                    <strong>3rd Place:</strong> College-Level Hackathon, MAIMS[cite: 1]
+                </div>
+                <div class="achievement-item">
+                    Consistently among top performers in BCA programme with a <strong>CGPA of 9.1</strong>[cite: 1]
+                </div>
+                <div class="achievement-item">
+                    <strong>Infosys Certified</strong> in UI/UX Design[cite: 1]
+                </div>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+</body>
+</html>
